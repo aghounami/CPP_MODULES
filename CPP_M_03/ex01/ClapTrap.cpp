@@ -6,7 +6,7 @@
 /*   By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 16:46:40 by aghounam          #+#    #+#             */
-/*   Updated: 2024/09/12 22:56:40 by aghounam         ###   ########.fr       */
+/*   Updated: 2024/09/20 14:54:05 by aghounam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ ClapTrap::ClapTrap() {
     std::cout << "ClapTrap default constructor called" << std::endl;
 }
 
-ClapTrap::ClapTrap(std::string name) : name(name), hitPoints(100), energyPoints(50), attackDamage(20) {
+ClapTrap::ClapTrap(std::string name) : name(name), hitPoints(10), energyPoints(10), attackDamage(0) {
     std::cout << "ClapTrap constructor called" << std::endl;
 }
 
@@ -48,6 +48,7 @@ void ClapTrap::attack(const std::string& target) {
     }
     std::cout << "ClapTrap " << this->name << " attacks " << target << ", causing " << this->attackDamage << " points of damage!" << std::endl;
     energyPoints -= 1;
+    
 }
 
 void ClapTrap::takeDamage(unsigned int amount) {
@@ -77,5 +78,6 @@ void ClapTrap::beRepaired(unsigned int amount) {
     
     std::cout << "ClapTrap " << this->name << " repairs itself, restoring " << amount << " hit points!" << std::endl;
     hitPoints += amount;
-    energyPoints -= 1; 
+    energyPoints -= 1;
+    std::cout << this->energyPoints << std::endl;
 }

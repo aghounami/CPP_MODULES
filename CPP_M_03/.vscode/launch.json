@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/aghounam/Desktop/CPP03",
-      "program": "/Users/aghounam/Desktop/CPP03/build/Debug/outDebug"
+      "cwd": "/Users/aghounam/Desktop/CPP_MODULES/CPP_M_03/.vscode",
+      "program": "/Users/aghounam/Desktop/CPP_MODULES/CPP_M_03/.vscode/build/Debug/outDebug"
     }
   ]
 }

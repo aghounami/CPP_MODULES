@@ -6,19 +6,18 @@
 /*   By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 16:46:23 by aghounam          #+#    #+#             */
-/*   Updated: 2024/09/20 14:36:45 by aghounam         ###   ########.fr       */
+/*   Updated: 2024/09/20 12:19:20 by aghounam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int main() {
-    ScavTrap scavTrap("ScavTrap");
-    scavTrap.beRepaired(0);
-    scavTrap.beRepaired(0);
-    scavTrap.beRepaired(0);
-    scavTrap.takeDamage(30);
-    scavTrap.attack("target");
+    DiamondTrap diamondTrap("DiamondTrap");
+    diamondTrap.attack("target");
+    // diamondTrap.takeDamage(5);
+    // diamondTrap.beRepaired(5);
+    diamondTrap.whoAmI();
+    // diamondTrap.highFivesGuys();
     return 0;
 }

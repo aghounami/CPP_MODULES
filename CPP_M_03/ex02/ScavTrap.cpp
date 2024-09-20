@@ -6,18 +6,23 @@
 /*   By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 20:59:11 by aghounam          #+#    #+#             */
-/*   Updated: 2024/09/13 00:15:18 by aghounam         ###   ########.fr       */
+/*   Updated: 2024/09/20 15:19:10 by aghounam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
+#include "ClapTrap.hpp"
 
 ScavTrap::ScavTrap() {
     std::cout << "ScavTrap default constructor called" << std::endl;
 }
 
-ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
+ScavTrap::ScavTrap(std::string name) {
     std::cout << "ScavTrap constructor called" << std::endl;
+    this->name = name;
+    this->energyPoints = 50;
+    this->hitPoints = 100;
+    this->attackDamage = 20;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &other) {
@@ -43,5 +48,14 @@ void ScavTrap::guardGate() {
 }
 
 void ScavTrap::attack(const std::string& target) {
+    if (energyPoints == 0) {
+        std::cout << "ScavTrap " << this->name << " is out of energy and can't attack!" << std::endl;
+        return;
+    }
+    if (hitPoints == 0) {
+        std::cout << "ScavTrap " << this->name << " is dead and can't attack!" << std::endl;
+        return;
+    }
     std::cout << "ScavTrap " << this->name << " attack " << target << ", causing " << this->attackDamage << " points of damage!" << std::endl;
+    energyPoints -= 1;
 }
