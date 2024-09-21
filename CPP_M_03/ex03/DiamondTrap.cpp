@@ -6,12 +6,14 @@
 /*   By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 10:57:28 by aghounam          #+#    #+#             */
-/*   Updated: 2024/09/20 16:40:49 by aghounam         ###   ########.fr       */
+/*   Updated: 2024/09/21 12:26:28 by aghounam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 #include "ClapTrap.hpp"
+#include "FragTrap.hpp"
+#include "ScavTrap.hpp"
 
 DiamondTrap::DiamondTrap() {
     std::cout << "DiamondTrap default constructor called" << std::endl;

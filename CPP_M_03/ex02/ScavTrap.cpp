@@ -6,12 +6,11 @@
 /*   By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 20:59:11 by aghounam          #+#    #+#             */
-/*   Updated: 2024/09/20 15:19:10 by aghounam         ###   ########.fr       */
+/*   Updated: 2024/09/21 12:08:39 by aghounam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
-#include "ClapTrap.hpp"
 
 ScavTrap::ScavTrap() {
     std::cout << "ScavTrap default constructor called" << std::endl;
