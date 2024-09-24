@@ -6,7 +6,7 @@
 /*   By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 16:46:40 by aghounam          #+#    #+#             */
-/*   Updated: 2024/09/20 20:51:40 by aghounam         ###   ########.fr       */
+/*   Updated: 2024/09/21 14:41:37 by aghounam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,5 +77,6 @@ void ClapTrap::beRepaired(unsigned int amount) {
     
     std::cout << "ClapTrap " << this->name << " repairs itself, restoring " << amount << " hit points!" << std::endl;
     hitPoints += amount;
+    printf("hitPoints: %u\n", amount);
     energyPoints -= 1; 
 }
