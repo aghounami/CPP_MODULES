@@ -6,7 +6,7 @@
 /*   By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 11:59:03 by aghounam          #+#    #+#             */
-/*   Updated: 2024/10/10 13:19:11 by aghounam         ###   ########.fr       */
+/*   Updated: 2024/11/08 16:14:30 by aghounam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,17 +21,20 @@ void f()
 int main()
 {
     atexit(f);
-    Animal *j = new Dog();
-    Dog *i = new Dog();
-
-    Dog *k = new Dog(*i);
-    i->makeSound(); // will output the cat sound!
-    j->makeSound();
+    Animal *a = new Dog();
+    Animal *i = new Cat();
+    Animal *k = new Dog();
+    // *i = *k;
+    // i->setBrain("Idea1", 0);
+    // k->setBrain("Idea1", 0);
+    a->makeSound();
+    i->makeSound();
     k->makeSound();
-    delete j; // should not create a leak
-    // delete i;
-    
-    // delete k;
+
+    delete a;
+    delete i;
+    delete k;
 
     return 0;
 }
+ 

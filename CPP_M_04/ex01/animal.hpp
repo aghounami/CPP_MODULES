@@ -6,7 +6,7 @@
 /*   By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 11:07:29 by aghounam          #+#    #+#             */
-/*   Updated: 2024/10/10 12:01:34 by aghounam         ###   ########.fr       */
+/*   Updated: 2024/11/08 12:30:01 by aghounam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ class Dog : public Animal
         Dog(const Dog &other);
         Dog &operator=(const Dog &other);
         void makeSound() const;
+        void setBrain(std::string idea, int index);
 };
 
 class Cat : public Animal
@@ -54,6 +55,7 @@ class Cat : public Animal
         Cat(const Cat &other);
         Cat &operator=(const Cat &other);
         void makeSound() const;
+        void setBrain(std::string idea, int index);
 };
 
 #endif
