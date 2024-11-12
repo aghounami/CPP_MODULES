@@ -6,21 +6,24 @@
 /*   By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 11:59:03 by aghounam          #+#    #+#             */
-/*   Updated: 2024/10/10 11:34:33 by aghounam         ###   ########.fr       */
+/*   Updated: 2024/11/11 16:10:32 by aghounam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "animal.hpp"
+#include "Animal.hpp"
+#include "WrongAnimal.hpp"
+#include "WrongCat.hpp"
 
 int main()
 {
-    Animal* animal = new Cat();
-    Animal animal1(*animal);
-    std::cout << animal->getType() << std::endl;
-    std::cout << animal1.getType() << std::endl;
+    WrongAnimal* animal = new WrongCat();
+    WrongAnimal* animal3=  new WrongAnimal();
+
+    std::cout << "type : " << animal->getType() << std::endl;
+    std::cout << "type : " << animal3->getType() << std::endl;
     
+    animal->makeSound();
+    animal3->makeSound();
     delete animal;
-    delete &animal1;
-    // std::cout << animal->getType() << std::endl;
-    // std::cout << animal1->getType() << std::endl;
+    delete animal3;
 }

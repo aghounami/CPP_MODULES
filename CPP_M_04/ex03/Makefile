@@ -4,7 +4,8 @@ CC = c++ -std=c++98
 
 FLAGS = -Wall -Wextra -Werror
 
-src = main.cpp AMateria.cpp ICharacter.cpp Character.cpp
+src = main.cpp AMateria.cpp Character.cpp MateriaSource.cpp Ice.cpp Cure.cpp
+HEADERS = AMateria.hpp Character.hpp ICharacter.hpp IMateriaSource.hpp MateriaSource.hpp Ice.hpp Cure.hpp
 obj = $(src:.cpp=.o)
 
 all: $(NAME)
@@ -12,7 +13,7 @@ all: $(NAME)
 $(NAME): $(obj)
 	$(CC) $(FLAGS) $(obj) -o $(NAME)
 
-%.o: %.cpp
+%.o: %.cpp $(HEADERS)
 	$(CC) $(FLAGS) -c $< -o $@
 
 clean:

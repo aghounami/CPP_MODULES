@@ -6,12 +6,14 @@
 /*   By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 11:59:03 by aghounam          #+#    #+#             */
-/*   Updated: 2024/10/11 10:59:58 by aghounam         ###   ########.fr       */
+/*   Updated: 2024/11/12 02:50:37 by aghounam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Brain.hpp"
-#include "animal.hpp"
+#include "Animal.hpp"
+#include "Dog.hpp"
+
 
 void f()
 {
@@ -20,18 +22,24 @@ void f()
 
 int main()
 {
-    // atexit(f);
-    AAnimal *j = new AAnimal();
-    // Dog *i = new Dog();
+    atexit(f);
+    Dog *a = new Dog();
+    Dog *k = new Dog();
+    Dog *i = new Dog();
+    Dog *p = new Dog();
+    // *i = *k;
+    // i->setBrain("Idea1", 0);÷
+    // k->setBrain("Idea1", 0);
+    a->makeSound();
+    k->makeSound();
+    i->makeSound();
+    p->makeSound();
 
-    // Dog *k = new Dog(*i);
-    // i->makeSound(); // will output the cat sound!
-    j->makeSound();
-    // k->makeSound();
-    delete j; // should not create a leak
-    // delete i;
-    
-    // delete k;
+    delete a;
+    delete i;
+    delete k;
+    delete p;
 
     return 0;
 }
+ 

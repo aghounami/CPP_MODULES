@@ -6,7 +6,7 @@
 #    By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/02 10:37:17 by aghounam          #+#    #+#              #
-#    Updated: 2024/10/10 12:04:56 by aghounam         ###   ########.fr        #
+#    Updated: 2024/11/11 15:42:43 by aghounam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,13 +14,13 @@ NAME = brain
 
 CC = c++ -std=c++98
 
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror -g
 
-src = main.cpp animal.cpp Brain.cpp
+src = main.cpp Animal.cpp Brain.cpp Cat.cpp Dog.cpp
 
 obj = $(src:.cpp=.o)
 
-HEADERS = animal.hpp Brain.hpp
+HEADERS = Animal.hpp Brain.hpp Cat.hpp Dog.hpp
 
 all: $(NAME)
 

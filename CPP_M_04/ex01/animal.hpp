@@ -6,7 +6,7 @@
 /*   By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 11:07:29 by aghounam          #+#    #+#             */
-/*   Updated: 2024/11/08 12:30:01 by aghounam         ###   ########.fr       */
+/*   Updated: 2024/11/11 15:41:23 by aghounam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 #define ANIMAL_HPP
 
 #include <iostream>
-#include "Brain.hpp"
 
 class Animal
 {
@@ -30,32 +29,6 @@ class Animal
         std::string getType() const;
 };
 
-class Dog : public Animal
-{
-    private:
-        Brain *brain;
-    
-    public:
-        Dog();
-        ~Dog();
-        Dog(const Dog &other);
-        Dog &operator=(const Dog &other);
-        void makeSound() const;
-        void setBrain(std::string idea, int index);
-};
 
-class Cat : public Animal
-{
-    private:
-        Brain *brain;
-
-    public:
-        Cat();
-        ~Cat();
-        Cat(const Cat &other);
-        Cat &operator=(const Cat &other);
-        void makeSound() const;
-        void setBrain(std::string idea, int index);
-};
 
 #endif

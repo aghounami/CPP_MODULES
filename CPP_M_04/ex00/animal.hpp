@@ -6,7 +6,7 @@
 /*   By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 11:07:29 by aghounam          #+#    #+#             */
-/*   Updated: 2024/10/10 11:35:44 by aghounam         ###   ########.fr       */
+/*   Updated: 2024/11/11 15:53:09 by aghounam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,24 +30,6 @@ class Animal
         std::string getType() const;
 };
 
-class Dog : public Animal
-{
-    public:
-        Dog();
-        ~Dog();
-        Dog(const Dog &other);
-        Dog &operator=(const Dog &other);
-        void makeSound() const;
-};
 
-class Cat : public Animal
-{
-    public:
-        Cat();
-        ~Cat();
-        Cat(const Cat &other);
-        Cat &operator=(const Cat &other);
-        void makeSound() const;
-};
 
 #endif

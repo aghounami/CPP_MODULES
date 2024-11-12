@@ -6,7 +6,7 @@
 /*   By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 17:54:19 by aghounam          #+#    #+#             */
-/*   Updated: 2024/10/13 14:22:18 by aghounam         ###   ########.fr       */
+/*   Updated: 2024/11/12 00:49:26 by aghounam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,15 @@ Character::Character(std::string name) : name(name)
         inventory[i] = NULL;
 }
 
-Character::Character(const Character &other)
-{
-    *this = other;
+Character::Character(const Character &other) : name(other.name) {
+    for (int i = 0; i < 4; i++) {
+        if (other.inventory[i])
+            inventory[i] = other.inventory[i]->clone();
+        else
+            inventory[i] = NULL;
+    }
 }
+
 
 Character &Character::operator=(const Character &rhs)
 {
