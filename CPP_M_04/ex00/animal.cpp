@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   animal.cpp                                         :+:      :+:    :+:   */
+/*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 11:45:06 by aghounam          #+#    #+#             */
-/*   Updated: 2024/11/11 15:54:22 by aghounam         ###   ########.fr       */
+/*   Updated: 2024/11/15 22:31:19 by aghounam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Animal::Animal() : type("Animal")
 }
 Animal::Animal(std::string type) : type(type)
 {
-    std::cout << "Animal constructor called" << std::endl;
+    std::cout << "Animal parametre constructor called" << std::endl;
 }
 
 Animal::~Animal()
