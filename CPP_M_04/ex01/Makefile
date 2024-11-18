@@ -6,7 +6,7 @@
 #    By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/02 10:37:17 by aghounam          #+#    #+#              #
-#    Updated: 2024/11/11 15:42:43 by aghounam         ###   ########.fr        #
+#    Updated: 2024/11/17 21:17:38 by aghounam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = brain
 
 CC = c++ -std=c++98
 
-FLAGS = -Wall -Wextra -Werror -g
+FLAGS = -Wall -Wextra -Werror
 
 src = main.cpp Animal.cpp Brain.cpp Cat.cpp Dog.cpp
 

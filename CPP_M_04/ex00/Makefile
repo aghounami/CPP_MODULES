@@ -6,7 +6,7 @@
 #    By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/02 10:37:17 by aghounam          #+#    #+#              #
-#    Updated: 2024/11/11 16:09:42 by aghounam         ###   ########.fr        #
+#    Updated: 2024/11/17 17:11:04 by aghounam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ src = main.cpp Animal.cpp    Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
 
 obj = $(src:.cpp=.o)
 
-HEADERS = Animal.hpp  Dog.hpp Cat.hpp WrongAnimal.hpp WrongCat.hpp
+HEADERS = Animal.hpp Dog.hpp Cat.hpp WrongAnimal.hpp WrongCat.hpp
 
 all: $(NAME)
 

@@ -6,7 +6,7 @@
 /*   By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 15:40:53 by aghounam          #+#    #+#             */
-/*   Updated: 2024/11/12 03:06:00 by aghounam         ###   ########.fr       */
+/*   Updated: 2024/11/18 01:56:55 by aghounam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,12 @@
 #include "MateriaSource.hpp"
 #include "IMateriaSource.hpp"
 
-#include <cstdlib>
 void f()
 {
     system("leaks Interface");
 }
 int main()
 {
-    atexit(f);
 IMateriaSource* src = new MateriaSource();
 src->learnMateria(new Ice());
 src->learnMateria(new Cure());

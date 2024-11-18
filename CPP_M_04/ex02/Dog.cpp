@@ -6,13 +6,13 @@
 /*   By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 15:37:22 by aghounam          #+#    #+#             */
-/*   Updated: 2024/11/11 15:37:25 by aghounam         ###   ########.fr       */
+/*   Updated: 2024/11/17 21:21:32 by aghounam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include  "Dog.hpp"
 
-Dog::Dog() : Animal("Dog"), brain(nullptr)
+Dog::Dog() : AAnimal("Dog"), brain(nullptr)
 {
     type = "Dog";
     this->brain = new Brain();
@@ -29,15 +29,16 @@ Dog& Dog::operator=(const Dog &other)
 {
 
     this->type = other.type;
-    *brain = *other.brain;
+    if (this != &other) {
+        delete this->brain;
+        this->brain = new Brain(*other.brain);
+    }
     std::cout << "Dog assignation operator called" << std::endl;
     return *this;
 }
 
-Dog::Dog(const Dog &other)
+Dog::Dog(const Dog &other) : brain(NULL)
 {
-
-    this->brain = new Brain();
     *this = other;
     std::cout << "Dog copy constructor called" << std::endl;
 }

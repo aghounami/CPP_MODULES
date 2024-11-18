@@ -6,7 +6,7 @@
 /*   By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 15:48:47 by aghounam          #+#    #+#             */
-/*   Updated: 2024/11/12 02:24:44 by aghounam         ###   ########.fr       */
+/*   Updated: 2024/11/17 21:11:20 by aghounam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include "AMateria.hpp"
 
+// forward declaration
 class AMateria; 
 
 class ICharacter
