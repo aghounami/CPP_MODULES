@@ -6,7 +6,7 @@
 /*   By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 05:31:39 by aghounam          #+#    #+#             */
-/*   Updated: 2024/11/22 15:36:42 by aghounam         ###   ########.fr       */
+/*   Updated: 2024/11/22 21:54:52 by aghounam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@
 #define BUREAUCRAT_HPP
 
 #include <iostream>
+#include "Form.hpp"
+
+// forward declaration1
+class Form;
+
 class Bureaucrat
 {
     private:
@@ -30,6 +35,7 @@ class Bureaucrat
         int getGrade() const;
         void incrementGrade();
         void decrementGrade();
+        void signForm(Form &form);
         // cutom exceptionƒ
         class GradeTooHighException : public std::exception
         {

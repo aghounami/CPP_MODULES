@@ -6,7 +6,7 @@
 /*   By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 15:40:00 by aghounam          #+#    #+#             */
-/*   Updated: 2024/11/22 18:11:54 by aghounam         ###   ########.fr       */
+/*   Updated: 2024/11/22 23:04:09 by aghounam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,16 @@
 
 #include <iostream>
 #include "Bureaucrat.hpp"
+
+// forward declaration
+class Bureaucrat;
 class Form
 {
     private :
         std::string const name;
         bool isSigned;
         int const gradeToSign;
+        int const gradeToExecute;
 
     public :
         Form();
@@ -30,7 +34,8 @@ class Form
         ~Form();
         std::string const &getName() const;
         int getGrade() const;
-        bool signForm() const;
+        bool getSigned() const;
+        int getGradeToexecute() const;
         void beSigned(Bureaucrat &bureaucrat);
         class GradeTooHighException : public std::exception
         {
@@ -42,10 +47,7 @@ class Form
         {
             public:
                 virtual const char *what() const throw();
-        };
-        
-        
-                
+        };        
 };
 
 std::ostream &operator<<(std::ostream &out, Form const &other);

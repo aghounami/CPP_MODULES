@@ -6,7 +6,7 @@
 /*   By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 05:31:43 by aghounam          #+#    #+#             */
-/*   Updated: 2024/11/22 18:19:26 by aghounam         ###   ########.fr       */
+/*   Updated: 2024/11/22 23:06:44 by aghounam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int main()
         Bureaucrat bureaucrat("bureaucrat", 1);
         bureaucrat.decrementGrade();
         std::cout << bureaucrat;
-        Form form("form", 1);
+        Form form("form", 2);
         form.beSigned(bureaucrat);
         std::cout << form;
     }
