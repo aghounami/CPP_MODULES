@@ -6,13 +6,13 @@
 /*   By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 17:22:02 by aghounam          #+#    #+#             */
-/*   Updated: 2024/11/26 23:01:53 by aghounam         ###   ########.fr       */
+/*   Updated: 2024/11/27 15:09:10 by aghounam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScalarConverter.hpp"
 
-int check_printable(char c)
+int check_printable(double c)
 {
     if (c >= 32 && c <= 126)
         return EXIT_SUCCESS;
@@ -31,10 +31,10 @@ void int_case(std::string data)
 {
     double nb = std::atof(data.c_str());
     
-    if (check_printable(static_cast<char>(nb)) == EXIT_SUCCESS) 
+    if (check_printable(nb) == EXIT_SUCCESS) 
         std::cout << "char: " << static_cast<char>(nb) << std::endl;
     else
-        std::cout << "Non Dsplayable" << std::endl;
+        std::cout << "char: " << "Non Dsplayable" << std::endl;
 
     if (nb > INT_MAX || nb < INT_MIN)
         std::cout << "int: " << "impossible" << std::endl;
@@ -47,10 +47,10 @@ void float_case(std::string data)
 {
     double nb = std::atof(data.c_str());
     
-    if (check_printable(static_cast<char>(nb)) == EXIT_SUCCESS) 
+    if (check_printable(nb) == EXIT_SUCCESS) 
         std::cout << "char: " << static_cast<char>(nb) << std::endl;
     else
-        std::cout << "Non Dsplayable" << std::endl;
+        std::cout << "char: " << "Non Dsplayable" << std::endl;
 
     if (nb > INT_MAX || nb < INT_MIN)
         std::cout << "int: " << "impossible" << std::endl;
@@ -63,10 +63,10 @@ void double_case(std::string data)
 {
     double nb = std::atof(data.c_str());
     
-    if (check_printable(static_cast<char>(nb)) == EXIT_SUCCESS) 
+    if (check_printable(nb) == EXIT_SUCCESS) 
         std::cout << "char: " << static_cast<char>(nb) << std::endl;
     else
-        std::cout << "Non Dsplayable" << std::endl;
+        std::cout << "char: " << "Non Dsplayable" << std::endl;
 
     if (nb > INT_MAX || nb < INT_MIN)
         std::cout << "int: " << "impossible" << std::endl;

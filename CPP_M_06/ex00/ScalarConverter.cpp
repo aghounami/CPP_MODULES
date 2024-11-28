@@ -6,7 +6,7 @@
 /*   By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 11:16:13 by aghounam          #+#    #+#             */
-/*   Updated: 2024/11/26 19:10:01 by aghounam         ###   ########.fr       */
+/*   Updated: 2024/11/27 15:09:50 by aghounam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,13 +87,45 @@ int int_check(std::string data)
     return 0;
 }
 
+int check_nan(std::string data)
+{
+    if (std::strncmp(data.c_str(), "nan", 3) == 0)
+    {
+        std::cout << "char: " << "impossible" << std::endl;
+        std::cout << "int: " << "impossible" << std::endl;
+        std::cout << "float: " << "nan" << "f" << std::endl;
+        std::cout << "double: " << "nan" << std::endl;
+        return 1;
+    }
+    if (std::strncmp(data.c_str(), "-inf", 4) == 0)
+    {
+        std::cout << "char: " << "impossible" << std::endl;
+        std::cout << "int: " << "impossible" << std::endl;
+        std::cout << "float: " << "-inf" << "f" << std::endl;
+        std::cout << "double: " << "-inf" << std::endl;
+        return 2;
+    }
+    if (std::strncmp(data.c_str(), "+inf", 4) == 0)
+    {
+        std::cout << "char: " << "impossible" << std::endl;
+        std::cout << "int: " << "impossible" << std::endl;
+        std::cout << "float: " << "+inf" << "f" << std::endl;
+        std::cout << "double: " << "+inf" << std::endl;
+        return 3;
+    }
+    return 0;
+}
+
 int ScalarConverter::converte(std::string data)
 {
     // Set the precision and force fixed-point notation
     std::cout << std::fixed << std::setprecision(1);
-    
+
+    if (check_nan(data) != 0)
+        return EXIT_SUCCESS;
+
     int flag = pars(data);
-    std::cout << flag << std::endl;
+    // std::cout << flag << std::endl;
     if (flag == EXIT_FAILURE)
         return EXIT_FAILURE;
     if (flag == 0)
