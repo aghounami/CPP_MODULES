@@ -6,11 +6,11 @@
 #    By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/19 05:31:45 by aghounam          #+#    #+#              #
-#    Updated: 2024/11/23 10:40:16 by aghounam         ###   ########.fr        #
+#    Updated: 2024/11/23 11:57:54 by aghounam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = maggots
+NAME = form_28B
 
 SRCS = main.cpp Bureaucrat.cpp  AForm.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp
 

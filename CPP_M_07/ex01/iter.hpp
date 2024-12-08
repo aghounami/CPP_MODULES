@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   iter.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/27 15:11:53 by aghounam          #+#    #+#             */
-/*   Updated: 2024/12/06 23:23:39 by aghounam         ###   ########.fr       */
+/*   Created: 2024/12/08 01:08:57 by aghounam          #+#    #+#             */
+/*   Updated: 2024/12/08 01:31:40 by aghounam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Serializer.hpp"
+#ifndef ITER
+#define ITER
 
-int main()
+#include <iostream>
+
+template <typename T, typename F>
+void iter(T *array, size_t length, F Function)
 {
-    std::string name = "ahmed";
-    Data ptr ;
-
-    ptr.a = 1;
-    ptr.b = name;
-    
-    Data* ptr2  = &ptr;
-
-    
-    uintptr_t ptrAsInt = Serializer::serialize(ptr2);
-    
-    Data* SamePtr = Serializer::deserialize(ptrAsInt);
-
-    std::cout << ptr2 << std::endl;
-    std::cout << SamePtr << std::endl;
+    size_t i = 0;
+    while (i < length)
+    {
+        Function(array[i]);
+        i++;
+    }
 }
+
+#endif

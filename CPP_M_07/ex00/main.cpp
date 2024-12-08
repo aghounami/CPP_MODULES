@@ -5,28 +5,26 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/27 15:11:53 by aghounam          #+#    #+#             */
-/*   Updated: 2024/12/06 23:23:39 by aghounam         ###   ########.fr       */
+/*   Created: 2024/12/07 23:15:03 by aghounam          #+#    #+#             */
+/*   Updated: 2024/12/08 01:07:56 by aghounam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Serializer.hpp"
+#include "whatever.hpp"
 
-int main()
+int main(void)
 {
-    std::string name = "ahmed";
-    Data ptr ;
-
-    ptr.a = 1;
-    ptr.b = name;
-    
-    Data* ptr2  = &ptr;
-
-    
-    uintptr_t ptrAsInt = Serializer::serialize(ptr2);
-    
-    Data* SamePtr = Serializer::deserialize(ptrAsInt);
-
-    std::cout << ptr2 << std::endl;
-    std::cout << SamePtr << std::endl;
+    int a = 2;
+    int b = 3;
+    ::swap(a, b);
+    std::cout << "a = " << a << ", b = " << b << std::endl;
+    std::cout << "min( a, b ) = " << ::min(a, b) << std::endl;
+    std::cout << "max( a, b ) = " << ::max(a, b) << std::endl;
+    std::string c = "chaine1";
+    std::string d = "chaine2";
+    ::swap(c, d);
+    std::cout << "c = " << c << ", d = " << d << std::endl;
+    std::cout << "min( c, d ) = " << ::min(c, d) << std::endl;
+    std::cout << "max( c, d ) = " << ::max(c, d) << std::endl;
+    return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 09:16:16 by aghounam          #+#    #+#             */
-/*   Updated: 2024/11/24 09:57:09 by aghounam         ###   ########.fr       */
+/*   Updated: 2024/11/23 11:54:46 by aghounam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
 
 void ShrubberyCreationForm::execute(Bureaucrat const &executor) const
 {
-   	if (this->getSigned() == false)
+   if (!this->getSigned())
 		throw FileNotOpenedException();
 	if (executor.getGrade() > this->getGradeToexecute())
 		throw Bureaucrat::GradeTooLowException();

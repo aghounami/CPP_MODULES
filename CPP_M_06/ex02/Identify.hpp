@@ -1,32 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Identify.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/27 15:11:53 by aghounam          #+#    #+#             */
-/*   Updated: 2024/12/06 23:23:39 by aghounam         ###   ########.fr       */
+/*   Created: 2024/12/05 10:14:28 by aghounam          #+#    #+#             */
+/*   Updated: 2024/12/06 23:24:23 by aghounam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Serializer.hpp"
+#ifndef IDENTIFY
+#define IDENTIFY
 
-int main()
+#include <iostream>
+class Base
 {
-    std::string name = "ahmed";
-    Data ptr ;
+public:
+    virtual ~Base();
+};
 
-    ptr.a = 1;
-    ptr.b = name;
-    
-    Data* ptr2  = &ptr;
+class A : public Base
+{
+public:
+    ~A();
+};
 
-    
-    uintptr_t ptrAsInt = Serializer::serialize(ptr2);
-    
-    Data* SamePtr = Serializer::deserialize(ptrAsInt);
+class B : public Base
+{
+public:
+    ~B();
+};
 
-    std::cout << ptr2 << std::endl;
-    std::cout << SamePtr << std::endl;
-}
+class C : public Base
+{
+public:
+    ~C();
+};
+
+Base *generate(void);
+void identify(Base *p);
+void identify(Base &p);
+
+#endif

@@ -6,7 +6,7 @@
 /*   By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 11:16:13 by aghounam          #+#    #+#             */
-/*   Updated: 2024/11/27 15:09:50 by aghounam         ###   ########.fr       */
+/*   Updated: 2024/12/06 23:20:39 by aghounam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,7 +125,6 @@ int ScalarConverter::converte(std::string data)
         return EXIT_SUCCESS;
 
     int flag = pars(data);
-    // std::cout << flag << std::endl;
     if (flag == EXIT_FAILURE)
         return EXIT_FAILURE;
     if (flag == 0)

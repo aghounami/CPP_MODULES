@@ -6,7 +6,7 @@
 /*   By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 17:22:02 by aghounam          #+#    #+#             */
-/*   Updated: 2024/11/27 15:09:10 by aghounam         ###   ########.fr       */
+/*   Updated: 2024/12/05 21:32:31 by aghounam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void int_case(std::string data)
     if (check_printable(nb) == EXIT_SUCCESS) 
         std::cout << "char: " << static_cast<char>(nb) << std::endl;
     else
-        std::cout << "char: " << "Non Dsplayable" << std::endl;
+        std::cout << "char: " << "Non displayable" << std::endl;
 
     if (nb > INT_MAX || nb < INT_MIN)
         std::cout << "int: " << "impossible" << std::endl;
@@ -50,7 +50,7 @@ void float_case(std::string data)
     if (check_printable(nb) == EXIT_SUCCESS) 
         std::cout << "char: " << static_cast<char>(nb) << std::endl;
     else
-        std::cout << "char: " << "Non Dsplayable" << std::endl;
+        std::cout << "char: " << "Non displayable" << std::endl;
 
     if (nb > INT_MAX || nb < INT_MIN)
         std::cout << "int: " << "impossible" << std::endl;
@@ -66,7 +66,7 @@ void double_case(std::string data)
     if (check_printable(nb) == EXIT_SUCCESS) 
         std::cout << "char: " << static_cast<char>(nb) << std::endl;
     else
-        std::cout << "char: " << "Non Dsplayable" << std::endl;
+        std::cout << "char: " << "Non displayable" << std::endl;
 
     if (nb > INT_MAX || nb < INT_MIN)
         std::cout << "int: " << "impossible" << std::endl;

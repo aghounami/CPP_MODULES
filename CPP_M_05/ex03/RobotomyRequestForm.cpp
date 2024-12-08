@@ -6,7 +6,7 @@
 /*   By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 09:56:23 by aghounam          #+#    #+#             */
-/*   Updated: 2024/11/24 11:58:55 by aghounam         ###   ########.fr       */
+/*   Updated: 2024/11/24 13:06:09 by aghounam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,11 @@ void RobotomyRequestForm::execute(Bureaucrat const &executor) const
     time_t i = 0;
     std::time(&i);
     if (i % 2 == 0)
+    {
         std::cout << this->target << " has been robotomized successfully!" << std::endl;
+    }
     else
+    {
         std::cout << "The robotomy of " << this->target << " has failed!" << std::endl;
+    }
 }

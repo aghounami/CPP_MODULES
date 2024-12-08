@@ -5,29 +5,31 @@
 #                                                     +:+ +:+         +:+      #
 #    By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/11/19 05:31:45 by aghounam          #+#    #+#              #
-#    Updated: 2024/11/24 09:01:00 by aghounam         ###   ########.fr        #
+#    Created: 2024/12/05 09:56:50 by aghounam          #+#    #+#              #
+#    Updated: 2024/12/06 22:51:55 by aghounam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Bureaucrat
-
-SRCS = main.cpp Bureaucrat.cpp
-
-OBJS = $(SRCS:.cpp=.o)
+NAME = Identify
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-all: $(NAME)
+CC = c++
 
-$(NAME): $(OBJS)
-	c++ $(FLAGS) $(OBJS) -o $(NAME)
+SRC = main.cpp Identify.cpp
 
-%.o: %.cpp Bureaucrat.hpp
-	c++ $(FLAGS) -c $< -o $@
+OBJ = ${SRC:.cpp=.o}
+
+all : ${NAME}
+
+${NAME} : ${OBJ}
+	${CC} ${FLAGS} ${OBJ} -o ${NAME}
+
+%.o : %.cpp Identify.hpp
+	${CC} ${FLAGS} -c $< -o $@
 
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJ)
 
 fclean: clean
 	rm -f $(NAME)

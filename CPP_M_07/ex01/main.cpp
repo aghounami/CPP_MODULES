@@ -5,28 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/27 15:11:53 by aghounam          #+#    #+#             */
-/*   Updated: 2024/12/06 23:23:39 by aghounam         ###   ########.fr       */
+/*   Created: 2024/12/08 01:12:55 by aghounam          #+#    #+#             */
+/*   Updated: 2024/12/08 01:32:02 by aghounam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Serializer.hpp"
+#include "iter.hpp"
+
+template <typename L>
+void print_element(L elem)
+{
+    std::cout << elem << std::endl;
+}
 
 int main()
 {
-    std::string name = "ahmed";
-    Data ptr ;
+    std::string strarray[5] = {"aa", "bb", "cc", "dd", "ee"};
+    size_t length = 5;
+    iter(strarray, length, print_element<std::string>);
 
-    ptr.a = 1;
-    ptr.b = name;
-    
-    Data* ptr2  = &ptr;
-
-    
-    uintptr_t ptrAsInt = Serializer::serialize(ptr2);
-    
-    Data* SamePtr = Serializer::deserialize(ptrAsInt);
-
-    std::cout << ptr2 << std::endl;
-    std::cout << SamePtr << std::endl;
+    int intarray[5] = {1,2,3,4,5};
+    iter(intarray, length, print_element<int>);
 }

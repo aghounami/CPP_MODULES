@@ -1,37 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Serializer.hpp                                     :+:      :+:    :+:   */
+/*   whatever.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/27 15:39:32 by aghounam          #+#    #+#             */
-/*   Updated: 2024/12/06 23:00:53 by aghounam         ###   ########.fr       */
+/*   Created: 2024/12/07 23:15:16 by aghounam          #+#    #+#             */
+/*   Updated: 2024/12/07 23:56:35 by aghounam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SERIALIZER
-#define SERIALIZER
+#ifndef WHATEVER
+#define WHATEVER
 
 #include <iostream>
 
-struct Data
+template <typename T>
+void swap(T &value_1, T &value_2)
 {
-    int a;
-    std::string b;
-};
-
-class Serializer
+    T temp = value_1;
+    value_1 = value_2;
+    value_2 = temp;
+}
+template <typename T>
+T& min(T &value_1, T &value_2)
 {
-private:
-    Serializer();
-    Serializer(const Serializer &other);
-    ~Serializer();
-    Serializer &operator=(const Serializer &other);
+    if (value_1 < value_2)
+        return value_1;
+    return value_2;
+}
+template <typename T>
+T& max(T &value_1, T &value_2)
+{
+    if (value_1 > value_2)
+        return value_1;
+    return value_2;
+}
 
-public:
-    static uintptr_t serialize(Data *ptr);
-    static Data *deserialize(uintptr_t raw);
-};
 
 #endif

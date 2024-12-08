@@ -6,7 +6,7 @@
 /*   By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 11:16:15 by aghounam          #+#    #+#             */
-/*   Updated: 2024/11/26 18:07:19 by aghounam         ###   ########.fr       */
+/*   Updated: 2024/12/06 22:34:03 by aghounam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,19 @@
 #include <iomanip>
 class ScalarConverter
 {
-    private :
-        ScalarConverter();
-    public :
-        static int converte(std::string data);
+private:
+    ScalarConverter();
+    ScalarConverter(const ScalarConverter &other);
+    ~ScalarConverter();
+    ScalarConverter &operator=(const ScalarConverter &other);
+
+public:
+    static int converte(std::string data);
 };
 
 void char_case(std::string data);
 void int_case(std::string data);
 void float_case(std::string data);
 void double_case(std::string data);
-
+ 
 #endif
