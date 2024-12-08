@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/aghounam/Desktop/CPP_MODULES/CPP_M_07/ex00",
-      "program": "/Users/aghounam/Desktop/CPP_MODULES/CPP_M_07/ex00/build/Debug/outDebug"
+      "cwd": "/Users/aghounam/Desktop/CPP_MODULES/CPP_M_07/ex02",
+      "program": "/Users/aghounam/Desktop/CPP_MODULES/CPP_M_07/ex02/build/Debug/outDebug"
     }
   ]
 }

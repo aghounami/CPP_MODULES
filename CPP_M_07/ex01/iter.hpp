@@ -6,7 +6,7 @@
 /*   By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/08 01:08:57 by aghounam          #+#    #+#             */
-/*   Updated: 2024/12/08 01:31:40 by aghounam         ###   ########.fr       */
+/*   Updated: 2024/12/08 17:20:27 by aghounam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #define ITER
 
 #include <iostream>
+
+// Template Instantiation
 
 template <typename T, typename F>
 void iter(T *array, size_t length, F Function)
