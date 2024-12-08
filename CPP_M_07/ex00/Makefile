@@ -6,11 +6,11 @@
 #    By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/07 23:14:52 by aghounam          #+#    #+#              #
-#    Updated: 2024/12/08 00:10:25 by aghounam         ###   ########.fr        #
+#    Updated: 2024/12/08 17:41:14 by aghounam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = whatever
+NAME = Whatever
 SRC = main.cpp 
 OBJ = $(SRC:.cpp=.o)
 CC = c++
