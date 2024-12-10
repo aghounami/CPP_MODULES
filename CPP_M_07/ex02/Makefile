@@ -6,11 +6,11 @@
 #    By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/08 12:52:46 by aghounam          #+#    #+#              #
-#    Updated: 2024/12/08 12:53:07 by aghounam         ###   ########.fr        #
+#    Updated: 2024/12/08 20:27:40 by aghounam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Array
+NAME = arr
 SRC = main.cpp 
 OBJ = $(SRC:.cpp=.o)
 CC = c++

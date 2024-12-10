@@ -6,11 +6,12 @@
 /*   By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/08 12:53:27 by aghounam          #+#    #+#             */
-/*   Updated: 2024/12/08 17:14:31 by aghounam         ###   ########.fr       */
+/*   Updated: 2024/12/08 20:28:01 by aghounam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Array.hpp"
+
 
 int main()
 {
@@ -18,28 +19,13 @@ int main()
     {
         Array<int> a(5);
         Array<int> b(a);
+        Array<int> c;
 
-        a.setValue(0, 1);
-        a.setValue(1, 2);
-        a.setValue(2, 3);
-        a.setValue(3, 4);
-        a.setValue(4, 5);
-        
+        for(unsigned int i = 0; i < a.size(); i++)
+            a[i] = i + 1;
         b = a;
-
-        std::cout << "size : " << b.size() << std::endl;
-        std::cout << "size : " << a.size() << std::endl;
-        std::cout << a.getValue(0) << std::endl;
-        std::cout << a.getValue(1) << std::endl;
-        std::cout << a.getValue(2) << std::endl;
-        std::cout << a.getValue(3) << std::endl;
-        std::cout << a.getValue(4) << std::endl;
-        
-        std::cout << "------------------" << std::endl;
-    
-        std::cout << b.getValue(0) << std::endl;
-        std::cout << b.getValue(1) << std::endl;
-        std::cout << a.getValue(5) << std::endl;
+        for(unsigned int i = 0; i <= a.size(); i++)
+            std::cout << a[i] << std::endl;
     }
     catch (const std::out_of_range &e)
     {
