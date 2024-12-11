@@ -6,7 +6,7 @@
 /*   By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 23:00:53 by aghounam          #+#    #+#             */
-/*   Updated: 2024/12/11 00:18:29 by aghounam         ###   ########.fr       */
+/*   Updated: 2024/12/11 11:47:24 by aghounam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 int main()
 {
+    // sequence containers
     try
     {
         std::vector<int> vec;

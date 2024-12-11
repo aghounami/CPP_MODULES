@@ -118,6 +118,7 @@
     "unordered_map": "cpp",
     "utility": "cpp",
     "list": "cpp",
-    "deque": "cpp"
+    "deque": "cpp",
+    "stack": "cpp"
   }
 }

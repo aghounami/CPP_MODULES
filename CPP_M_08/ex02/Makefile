@@ -5,18 +5,18 @@
 #                                                     +:+ +:+         +:+      #
 #    By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/12/09 23:00:54 by aghounam          #+#    #+#              #
-#    Updated: 2024/12/11 11:17:08 by aghounam         ###   ########.fr        #
+#    Created: 2024/12/11 10:09:21 by aghounam          #+#    #+#              #
+#    Updated: 2024/12/11 10:59:29 by aghounam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Easy
+NAME = Mutated
 
 CC = c++ -std=c++98
 
 CFLAGS = -Wall -Wextra -Werror
 
-src = main.cpp
+src = main.cpp 
 
 OBJ = $(src:.cpp=.o)
 
@@ -25,7 +25,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
-%.o: %.cpp easyfind.hpp
+%.o: %.cpp MutantStack.hpp
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:

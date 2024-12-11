@@ -6,7 +6,7 @@
 /*   By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 15:36:45 by aghounam          #+#    #+#             */
-/*   Updated: 2024/12/11 00:33:17 by aghounam         ###   ########.fr       */
+/*   Updated: 2024/12/11 11:42:53 by aghounam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ int main()
         sp.push_back(11);
 
         Span vec(7);
-        // Span vec(-7); overflow
         vec.addNumber(10);
         vec.addNumber(sp.begin(), sp.end());
 

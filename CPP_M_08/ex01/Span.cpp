@@ -6,7 +6,7 @@
 /*   By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 15:36:42 by aghounam          #+#    #+#             */
-/*   Updated: 2024/12/11 00:33:38 by aghounam         ###   ########.fr       */
+/*   Updated: 2024/12/11 11:43:11 by aghounam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,13 +51,12 @@ void Span::addNumber(std::vector<int>::iterator start, std::vector<int>::iterato
 {
     int distance = std::distance(start, end);
     if ((distance + vec.size()) > N)
-        throw std::range_error("out of range");
+        throw std::out_of_range("out of range");
     vec.insert(vec.end(), start, end);
 }
 
 int Span::longestSpan()
 {
-
     if (this->vec.size() < 2)
         throw std::range_error("No enough numbers in the span");
     std::vector<int> copy = this->vec;
