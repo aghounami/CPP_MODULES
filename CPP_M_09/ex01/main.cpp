@@ -1,22 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   BitcoinExchange.hpp                                :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/12 17:07:52 by aghounam          #+#    #+#             */
-/*   Updated: 2024/12/13 10:03:52 by aghounam         ###   ########.fr       */
+/*   Created: 2024/12/13 10:34:34 by aghounam          #+#    #+#             */
+/*   Updated: 2024/12/13 16:31:48 by aghounam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BITCOINEXANGE_HPP
-#define BITCOINEXANGE_HPP
+#include "RPN.hpp"
 
-#include <iostream>
-#include <map>
-#include <fstream>
 
-void find_key(std::map<std::string, std::string> database, std::string input_file);
 
-#endif
+int main(int ac, char *av[])
+{
+    if (ac != 2)
+    {
+        std::cerr << "Error: Wrong argumenss" << std::endl;
+        return 1;
+    }
+    std::string av_1 = av[1];
+    
+    if (av_1.empty())
+    {
+        std::cerr << "Error: av[1] empty" << std::endl;
+        return 1;
+    }
+        
+
+    RPN obj(av[1]);
+}
