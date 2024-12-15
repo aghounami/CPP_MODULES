@@ -6,18 +6,18 @@
 #    By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/13 18:23:49 by aghounam          #+#    #+#              #
-#    Updated: 2024/12/13 18:23:50 by aghounam         ###   ########.fr        #
+#    Updated: 2024/12/14 20:54:09 by aghounam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME = RPN
+NAME = PmergeMe
 
 CC = c++ -std=c++98
 
 FLAGS = -Wall -Wextra -Werror
 
-src = main.cpp RPN.cpp
+src = main.cpp PmergeMe.cpp
 
 obj = $(src:.cpp=.o)
 
@@ -26,7 +26,7 @@ all : $(NAME)
 $(NAME) : $(obj)
 	$(CC) $(FLAGS) $(obj) -o $(NAME)
 
-%.o: %.cpp RPN.hpp
+%.o: %.cpp PmergeMe.hpp
 	$(CC) $(FLAGS) -c $< -o $@
 	
 clean:
