@@ -6,7 +6,7 @@
 /*   By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 10:34:34 by aghounam          #+#    #+#             */
-/*   Updated: 2024/12/13 16:31:48 by aghounam         ###   ########.fr       */
+/*   Updated: 2024/12/15 23:33:45 by aghounam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,5 @@ int main(int ac, char *av[])
         std::cerr << "Error: av[1] empty" << std::endl;
         return 1;
     }
-        
-
     RPN obj(av[1]);
 }

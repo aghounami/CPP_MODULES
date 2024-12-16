@@ -6,13 +6,11 @@
 /*   By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 17:07:16 by aghounam          #+#    #+#             */
-/*   Updated: 2024/12/13 10:03:36 by aghounam         ###   ########.fr       */
+/*   Updated: 2024/12/16 19:55:03 by aghounam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "BitcoinExchange.hpp"
-
-
 
 int main(int ac, char *av[])
 {
@@ -42,5 +40,6 @@ int main(int ac, char *av[])
             database[key] = value;
         }
     }
+    filedata.close();
     find_key(database, av[1]);
 }

@@ -6,7 +6,7 @@
 /*   By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 18:24:02 by aghounam          #+#    #+#             */
-/*   Updated: 2024/12/15 13:11:33 by aghounam         ###   ########.fr       */
+/*   Updated: 2024/12/15 23:51:57 by aghounam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,30 +75,14 @@ void PmergeMe<Container>::merge(Container &leftarray, Container &rightarray, Con
     while (l < leftsize && r < rightsize)
     {
         if (leftarray[l] < rightarray[r])
-        {
-            array[i] = leftarray[l];
-            i++;
-            l++;
-        }
+            array[i++] = leftarray[l++];
         else
-        {
-            array[i] = rightarray[r];
-            i++;
-            r++;
-        }
+            array[i++] = rightarray[r++];
     }
     while (l < leftsize)
-    {
-        array[i] = leftarray[l];
-        i++;
-        l++;
-    }
+        array[i++] = leftarray[l++];
     while (r < rightsize)
-    {
-        array[i] = rightarray[r];
-        i++;
-        r++;
-    }
+        array[i++] = rightarray[r++];
 }
 
 template <typename Container>
@@ -115,7 +99,6 @@ void PmergeMe<Container>::sort_arr(Container &array)
 
     sort_arr(left_arr);
     sort_arr(right_arr);
-
     merge(left_arr, right_arr, array);
 }
 
@@ -124,27 +107,54 @@ void PmergeMe<Container>::process()
 {
     unsigned int j = 0;
 
-   
     sort_arr(this->right);
-   
-
-    j = 0;
     while (j < this->left.size())
     {
         typename Container::iterator it = std::lower_bound(this->right.begin(), this->right.end(), this->left[j]);
         this->right.insert(it, this->left[j]);
         j++;
     }
-
+    
     if (this->odd_flag == 1)
     {
         typename Container::iterator it = std::lower_bound(this->right.begin(), this->right.end(), this->array[this->array.size() - 1]);
         this->right.insert(it, this->array[this->array.size() - 1]);
     }
+}
 
-    
+template <typename Container>
+PmergeMe<Container>::PmergeMe(){}
 
-    
+template <typename Container>
+PmergeMe<Container> &PmergeMe<Container>::operator=(const PmergeMe &other){
+    if(this != &other)
+    {
+        array = other.array;
+        left = other.left;
+        right = other.right;
+        odd_flag = other.odd_flag;
+    }
+    return *this;
+}
+
+template <typename Container>
+PmergeMe<Container>::PmergeMe(const PmergeMe &other)
+{
+    *this = other;
+}
+
+template <typename Container>
+PmergeMe<Container>::~PmergeMe(){}
+
+unsigned int length(std::string str)
+{
+    return (str.size());
+}
+
+template <typename Container>
+unsigned int PmergeMe<Container>::get_size()
+{
+    return this->array.size();
 }
 
 // instantiation for vector and deque

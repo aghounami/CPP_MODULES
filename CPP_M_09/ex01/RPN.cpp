@@ -6,7 +6,7 @@
 /*   By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 10:35:03 by aghounam          #+#    #+#             */
-/*   Updated: 2024/12/13 16:46:49 by aghounam         ###   ########.fr       */
+/*   Updated: 2024/12/15 23:47:38 by aghounam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void RPN::operation(char ch)
 {
-    if (stk.size() == 2)
+    if (stk.size() == 2 || stk.size() == 3)
     {
-        int second = stk.top();
+        double second = stk.top();
         stk.pop();
-        int first = stk.top();
+        double first = stk.top();
         stk.pop();
         if (ch == '*')
             stk.push(first * second);
@@ -38,7 +38,7 @@ void RPN::operation(char ch)
 
 void RPN::execute(std::string number)
 {
-    if (stk.size() < 2)
+    if (stk.size() < 3)
         stk.push((int)std::atof(number.c_str()));
     else
     {
@@ -62,7 +62,7 @@ RPN::RPN(std::string source)
             operation(source[i]);
     }
     if (stk.size() == 1)
-        std::cout << this->stk.top();
+        std::cout << this->stk.top() << std::endl;
     else
     {
         std::cerr << "Error" << std::endl;
@@ -73,6 +73,7 @@ RPN::RPN(std::string source)
 RPN::RPN() {}
 
 RPN::RPN(const RPN &other) : stk(other.stk) {}
+
 RPN &RPN::operator=(const RPN &other){
     if (this != &other)
         stk = other.stk;
