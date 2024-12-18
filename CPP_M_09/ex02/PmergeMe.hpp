@@ -6,7 +6,7 @@
 /*   By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 18:24:09 by aghounam          #+#    #+#             */
-/*   Updated: 2024/12/16 00:08:08 by aghounam         ###   ########.fr       */
+/*   Updated: 2024/12/17 15:03:19 by aghounam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,8 @@
 #define PMERGEME_HPP
 
 #include <iostream>
-#include <algorithm>
 #include <vector>
 #include <deque>
-#include <utility>
-#include <ctime>
-#include <iomanip>
 
 template <typename Container>
 class PmergeMe

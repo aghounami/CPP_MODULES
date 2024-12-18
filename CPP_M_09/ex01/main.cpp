@@ -6,13 +6,11 @@
 /*   By: aghounam <aghounam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 10:34:34 by aghounam          #+#    #+#             */
-/*   Updated: 2024/12/15 23:33:45 by aghounam         ###   ########.fr       */
+/*   Updated: 2024/12/17 15:07:04 by aghounam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RPN.hpp"
-
-
 
 int main(int ac, char *av[])
 {
