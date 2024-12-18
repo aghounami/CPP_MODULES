@@ -4,7 +4,7 @@ Welcome to my 42 Piscine repository! This repository contains all the exercises 
 
 ## Table of Contents
 
-- [Day 00 (CPP_M_00)](#CPP_M_00)
+- [Day 00 (CPP_M_00)](#CPP_MODULE_00)
 - [Day 01 (CPP_M_01)](#CPP_MODULE_01)
 - [Day 02 (CPP_M_02)](#CPP_MODULE_02)
 - [Day 03 (CPP_M_03)](#CPP_MODULE_03)
